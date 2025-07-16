@@ -8,6 +8,7 @@ plugins {
     id(BuildPlugins.kotlinAndroid) apply false
     id(BuildPlugins.dokkaPlugin) version Versions.dokka
     id(BuildPlugins.gradleVersionsPlugin) version Versions.gradleVersionsPlugin
+    id("com.google.dagger.hilt.android") version "2.56.2" apply false
 }
 
 allprojects {
@@ -27,14 +28,6 @@ allprojects {
         filter {
             exclude { element -> element.file.path.contains("generated/") }
         }
-    }
-}
-
-buildscript {
-    val jacocoVersion by extra("0.2")
-
-    dependencies {
-        classpath("com.hiya:jacoco-android:$jacocoVersion")
     }
 }
 

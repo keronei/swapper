@@ -1,3 +1,8 @@
 <resources>
-  <string name="app_name">GradlePlugins</string>
+  <string name="app_name">Swapper</string>
+  <string name="gps_sensor_is_unavailable">GPS sensor unavailable</string>
+  <string name="pls_grant_location_permission">Please grant location permission</string>
+    <string name="location_guide">This shows your location accuracy, a value of 100m or less is OK. \nEnsure your location is turned on.</string>
+  <string name="selfie_guide"><![CDATA[An image is required for reference purposes during check-in & check-out, a well lit image works best.]]></string>
+  <string name="station_signal_guide">This indicates the signal strength from the station, the closer you are the better. This requires your bluetooth and location to be ON.</string>
 </resources>

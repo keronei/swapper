@@ -4,7 +4,7 @@ object Versions {
     const val kotlin = "1.8.0"
     const val appCompat = "1.7.0-alpha02"
     const val constraintLayout = "2.2.0-alpha07"
-    const val ktx = "1.7.0"
+    const val ktx = "1.8.0"
     const val material = "1.9.0-alpha01"
 
     //Version codes for all the test libraries
@@ -19,7 +19,7 @@ object Versions {
     const val spotless = "6.14.1"
     const val dokka = "1.7.20"
     const val gradleVersionsPlugin = "0.45.0"
-    const val jacoco = "0.8.7"
+    const val jacoco = "0.8.13"
 }
 
 object BuildPlugins {
@@ -33,7 +33,6 @@ object BuildPlugins {
     const val kotlinAndroid = "org.jetbrains.kotlin.android"
     const val kotlinParcelizePlugin = "org.jetbrains.kotlin.plugin.parcelize"
     const val gradleVersionsPlugin = "com.github.ben-manes.versions"
-    const val jacocoAndroid = "com.hiya.jacoco-android"
 }
 
 object Libraries {
@@ -57,7 +56,7 @@ object TestLibraries {
 
 object AndroidSdk {
     const val minSdkVersion = 21
-    const val compileSdkVersion = 33
+    const val compileSdkVersion = 35
     const val targetSdkVersion = compileSdkVersion
     const val versionCode = 1
     const val versionName = "1.0"
