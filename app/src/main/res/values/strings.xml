@@ -5,4 +5,22 @@
     <string name="location_guide">This shows your location accuracy, a value of 100m or less is OK. \nEnsure your location is turned on.</string>
   <string name="selfie_guide"><![CDATA[An image is required for reference purposes during check-in & check-out, a well lit image works best.]]></string>
   <string name="station_signal_guide">This indicates the signal strength from the station, the closer you are the better. This requires your bluetooth and location to be ON.</string>
+  <string name="let_s_verify_your_location">Let\'s verify your location</string>
+  <string name="step_1_your_gps">Step 1: Your GPS</string>
+  <string name="gps_guide_launcher">GPS guide launcher</string>
+  <string name="step_2_station_signal">Step 2: Station Signal</string>
+  <string name="station_signal_guide_launcher">Station Signal guide launcher</string>
+  <string name="enable_bluetooth">Enable Bluetooth</string>
+  <string name="signal_strength_0_0">Signal Strength: 0.0%</string>
+  <string name="step_3_let">Step 3: Let\'s take a selfie</string>
+  <string name="selfie_guide_launcher">Selfie guide launcher</string>
+  <string name="persons_selfie">persons selfie</string>
+  <string name="open_camera">Open Camera</string>
+  <string name="check_in">Check In</string>
+  <string name="hello">Hello,</string>
+  <string name="let_s_get_to_work">Let\'s get to work</string>
+  <string name="placeholder_station_name">Mpigi swap station</string>
+  <string name="done_by_you">Done by you</string>
+  <string name="total_today">Total today</string>
+  <string name="available_swaps">Available swaps</string>
 </resources>

@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="12dp"
         android:layout_marginVertical="12dp"
-        android:text="Hello,"
+        android:text="@string/hello"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="12dp"
         android:layout_marginVertical="12dp"
-        android:text="Let's get to work"
+        android:text="@string/let_s_get_to_work"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/greetings" />
 
@@ -45,11 +45,9 @@
             android:layout_height="wrap_content"
             android:padding="12dp"
             android:textStyle="bold"
-            android:drawableTint="@color/teal_700"
-            android:drawableEnd="@drawable/baseline_ev_station_24"
-            android:text="Mpigi swap station" />
-
-
+            android:text="@string/placeholder_station_name"
+            app:drawableEndCompat="@drawable/baseline_ev_station_24"
+            app:drawableTint="@color/teal_700" />
 
     </androidx.cardview.widget.CardView>
 
@@ -73,7 +71,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="6dp"
                 android:textStyle="bold"
-                android:text="Done by you" />
+                android:text="@string/done_by_you" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -108,7 +106,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="6dp"
                 android:textStyle="bold"
-                android:text="Total today" />
+                android:text="@string/total_today" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -141,7 +139,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Available swaps"
+                android:text="@string/available_swaps"
                 android:textSize="18sp"
                 android:layout_marginTop="12dp"
                 android:textColor="@color/white"

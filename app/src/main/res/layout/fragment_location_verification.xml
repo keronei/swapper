@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Let's verify your location"
+            android:text="@string/let_s_verify_your_location"
             android:textAlignment="center"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -30,7 +30,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginHorizontal="12dp"
                 android:layout_marginTop="16dp"
-                android:text="Step 1: Your GPS"
+                android:text="@string/step_1_your_gps"
                 android:textAlignment="viewStart"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -39,6 +39,7 @@
                 android:id="@+id/gps_guide"
                 android:layout_width="44dp"
                 android:layout_height="44dp"
+                android:contentDescription="@string/gps_guide_launcher"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:background="@android:color/transparent"
@@ -63,7 +64,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginHorizontal="12dp"
                 android:layout_marginTop="16dp"
-                android:text="Step 2: Station Signal"
+                android:text="@string/step_2_station_signal"
                 android:textAlignment="viewStart"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -72,6 +73,7 @@
                 android:id="@+id/station_signal_guide"
                 android:layout_width="44dp"
                 android:layout_height="44dp"
+                android:contentDescription="@string/station_signal_guide_launcher"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:background="@android:color/transparent"
@@ -91,7 +93,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_margin="16dp"
-            android:text="Enable Bluetooth"
+            android:text="@string/enable_bluetooth"
             android:visibility="visible" />
 
 
@@ -100,7 +102,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Signal Strength: 0.0%"
+            android:text="@string/signal_strength_0_0"
             android:textAlignment="center"
             android:textColor="#6B7280"
             android:textSize="14sp" />
@@ -115,7 +117,7 @@
                 android:layout_marginHorizontal="12dp"
                 android:layout_marginTop="16dp"
                 android:layout_centerVertical="true"
-                android:text="Step 3: Let's take a selfie"
+                android:text="@string/step_3_let"
                 android:textAlignment="viewStart"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -124,6 +126,7 @@
                 android:id="@+id/selfie_guide"
                 android:layout_width="44dp"
                 android:layout_height="44dp"
+                android:contentDescription="@string/selfie_guide_launcher"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:background="@android:color/transparent"
@@ -136,7 +139,7 @@
             android:layout_height="150dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="12dp"
-            android:contentDescription="persons selfie"
+            android:contentDescription="@string/persons_selfie"
             android:visibility="gone" />
 
         <androidx.camera.view.PreviewView
@@ -159,7 +162,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_marginTop="12dp"
-                android:text="Open Camera" />
+                android:text="@string/open_camera" />
 
             <Button
                 android:id="@+id/check_in"
@@ -167,10 +170,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="12dp"
-                android:text="Check In"
-                android:visibility="gone" />
-
-
+                android:text="@string/check_in"
+                android:enabled="false" />
         </RelativeLayout>
 
     </LinearLayout>

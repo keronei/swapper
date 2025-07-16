@@ -255,7 +255,7 @@ class LocationVerificationFragment : Fragment(), LocationListenable, PermissionC
                     }
 
                     binding.launchCamera.text = "Retake"
-                    binding.checkIn.visibility = View.VISIBLE
+                    binding.checkIn.isEnabled = true
                     stopCameraPreview()
 
                     Log.i("CameraX", "Image saved to ${outputFileResults.savedUri}")
