@@ -15,9 +15,9 @@ for their request, they also have an option to confirm reception which automatic
 the request.
 
 ## Screenshots on App
-<img src="/screenshots/Screenshot_20250718-154649_Swapper.jpg" width="220" height="470"/> &nbsp;&nbsp;&nbsp;<img src="/screenshots/Screenshot_20250718-171125_Swapper.jpg" width="220" height="470"/>
+<img src="/screenshots/Screenshot_20250718-154649_Swapper.jpg" width="220" height="470"/> &nbsp;&nbsp;&nbsp;<img src="/screenshots/Screenshot_20250718-171125_Swapper.jpg" width="220" height="470"/>  <---- Swapper's side
 
-<img src="/screenshots/Screenshot_20250718-171108_Swapper.jpg" width="220" height="470"/>&nbsp;&nbsp;&nbsp; <img src="/screenshots/Screenshot_20250718-171117_Swapper.jpg" width="220" height="470"/> 
+<img src="/screenshots/Screenshot_20250718-171108_Swapper.jpg" width="220" height="470"/>&nbsp;&nbsp;&nbsp; <img src="/screenshots/Screenshot_20250718-171117_Swapper.jpg" width="220" height="470"/> <---- Central staff's side
 ## Multi-country support on API
 Since the country parameter only changes at login, the param is built into the baseUrl after it is stored
 on the preferences, this reduces the effort on the development to pass around the parameter, this remains effective
