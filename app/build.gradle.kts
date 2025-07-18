@@ -3,8 +3,8 @@ plugins {
     id(BuildPlugins.kotlinAndroid)
     id(BuildPlugins.kotlinParcelizePlugin)
     id(BuildPlugins.ktlintPlugin)
-    id("kotlin-kapt")
     id("com.google.dagger.hilt.android")
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -51,6 +51,8 @@ android {
     }
 
     dependencies {
+        val room_version = "2.7.2"
+
         implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
         implementation(Libraries.appCompat)
         implementation(Libraries.constraintLayout)
@@ -67,13 +69,28 @@ android {
         implementation("androidx.recyclerview:recyclerview:1.4.0")
         implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
         implementation("com.google.dagger:hilt-android:2.56.2")
-        kapt("com.google.dagger:hilt-android-compiler:2.55")
+        ksp("com.google.dagger:hilt-android-compiler:2.55")
         implementation("com.github.bumptech.glide:glide:4.16.0")
         annotationProcessor("com.github.bumptech.glide:compiler:4.16.0")
         implementation("androidx.camera:camera-camera2:1.4.2")
         implementation("androidx.camera:camera-core:1.4.2")
         implementation("androidx.camera:camera-lifecycle:1.4.2")
         implementation("androidx.camera:camera-view:1.4.2")
+        // Work
+        implementation(Libraries.work)
+        implementation(Libraries.hiltWork)
+        // Retrofit - for testing
+        implementation(Libraries.retrofit)
+
+        // Converter
+        implementation(Libraries.googleGson)
+        implementation(Libraries.retrofitGsonConverter)
+        // Mock Web Server
+        testImplementation(TestLibraries.mockWebServer)
+
+        ksp("androidx.room:room-compiler:$room_version")
+        annotationProcessor("androidx.room:room-compiler:$room_version")
+        implementation("androidx.room:room-ktx:$room_version")
 
         androidTestImplementation(TestLibraries.testRunner)
         androidTestImplementation(TestLibraries.espresso)
