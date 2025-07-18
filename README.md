@@ -1,7 +1,7 @@
 ## Batteries Request Feature
 This is documented [here](https://github.com/keronei/swapper/blob/master/README_Feature_Two.md)
 
-## Swapper Shift Tracking Prototype
+# Swapper Shift Tracking Prototype
 
 ### The Approach
 Swappers have accounts that are already registered and will be required to login into a device being used
