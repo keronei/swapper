@@ -24,6 +24,8 @@ class DashboardViewModel @Inject constructor(
     private val _requests = MutableStateFlow<List<RequestsWithUpdatesModel>>(emptyList())
     val requests: StateFlow<List<RequestsWithUpdatesModel>> = _requests
 
+    var loggedIn = false
+
     init {
         observeLocalRequests()
     }

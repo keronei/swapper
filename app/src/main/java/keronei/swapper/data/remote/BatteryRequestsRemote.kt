@@ -8,5 +8,6 @@ data class BatteryRequestsRemote (
     val createdTime: String,
     val status: String,
     val batteriesCount: Int,
+    val requestedByStation: String,
     val updates: List<BatteryRequestUpdatesRemote>
 )
