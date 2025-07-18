@@ -1,6 +1,9 @@
-# Swapper Shift Tracking Prototype
+## Batteries Request Feature
+This is documented [here](https://github.com/keronei/swapper/blob/master/README_Feature_Two.md)
 
-## The Approach
+## Swapper Shift Tracking Prototype
+
+### The Approach
 Swappers have accounts that are already registered and will be required to login into a device being used
 at a particular station providing the following: Username/phone, password and country. Once they are logged in, 
 they can now check-in to the station.
