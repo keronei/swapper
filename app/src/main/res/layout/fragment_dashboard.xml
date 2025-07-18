@@ -36,19 +36,36 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="12dp"
-        app:cardCornerRadius="12dp"
         android:layout_marginVertical="12dp"
+        app:cardCornerRadius="12dp"
         app:layout_constraintTop_toBottomOf="@id/cheerup">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="12dp"
-            android:textStyle="bold"
-            android:text="@string/placeholder_station_name"
-            app:drawableEndCompat="@drawable/baseline_ev_station_24"
-            app:drawableTint="@color/teal_700" />
+            android:layout_margin="16dp"
+            android:orientation="vertical">
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/placeholder_station_name"
+                android:textStyle="bold"
+                app:drawableEndCompat="@drawable/baseline_ev_station_24"
+                app:drawableTint="@color/teal_700" />
+
+                <TextView
+                    android:id="@+id/unsynced_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTint="?attr/colorError"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="end"
+                    android:drawablePadding="8dp"
+                    android:drawableStart="@drawable/baseline_running_with_errors_24"
+                    android:text="5 unsynced requests" />
+
+        </LinearLayout>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -70,8 +87,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="6dp"
-                android:textStyle="bold"
-                android:text="@string/done_by_you" />
+                android:text="@string/done_by_you"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -105,8 +122,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="6dp"
-                android:textStyle="bold"
-                android:text="@string/total_today" />
+                android:text="@string/total_today"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -132,17 +149,17 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
             android:background="@drawable/swap"
+            android:orientation="vertical"
             android:padding="18dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/available_swaps"
-                android:textSize="18sp"
                 android:layout_marginTop="12dp"
+                android:text="@string/available_swaps"
                 android:textColor="@color/white"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView

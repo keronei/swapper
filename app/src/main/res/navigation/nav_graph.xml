@@ -7,15 +7,25 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="keronei.swapper.dashboard.DashboardFragment"
-        android:label="HomeFragment" >
+        android:label="" >
         <action
             android:id="@+id/action_homeFragment_to_locationVerificationFragment"
             app:destination="@id/locationVerificationFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/locationVerificationFragment"
         android:name="keronei.swapper.auth.LocationVerificationFragment"
-        android:label="fragment_location_verification"
-        tools:layout="@layout/fragment_location_verification" />
+        android:label="Verification"
+        tools:layout="@layout/fragment_location_verification" >
+        <action
+            android:id="@+id/action_locationVerificationFragment_to_assignedRequestsFragment"
+            app:destination="@id/assignedRequestsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/assignedRequestsFragment"
+        android:name="keronei.swapper.dashboard.dispatch.AssignedRequestsFragment"
+        android:label="Batteries Requests" />
 
 </navigation>
