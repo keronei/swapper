@@ -30,22 +30,30 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 import com.google.common.util.concurrent.ListenableFuture
 import com.vmadalin.easypermissions.EasyPermissions
+import dagger.hilt.android.AndroidEntryPoint
+import dagger.hilt.android.lifecycle.HiltViewModel
 import keronei.swapper.R
+import keronei.swapper.dashboard.DashboardViewModel
 import keronei.swapper.databinding.FragmentLocationVerificationBinding
 import keronei.swapper.utils.PermissionCallback
 import keronei.swapper.utils.getPhotosDir
 import keronei.swapper.utils.hasGpsSensor
 import java.io.File
 
+@AndroidEntryPoint
 class LocationVerificationFragment : Fragment(), LocationListenable, PermissionCallback {
 
     private var obtainedLocation: Location? = null
+
+    private val dashViewModel: DashboardViewModel by activityViewModels()
 
     private var _binding: FragmentLocationVerificationBinding? = null
 
@@ -62,14 +70,7 @@ class LocationVerificationFragment : Fragment(), LocationListenable, PermissionC
     lateinit var cameraProvider: ProcessCameraProvider
     lateinit var preview: Preview
 
-    private val viewModel: LocationVerificationViewModel by viewModels()
     private var capturedPhotoName: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        // TODO: Use the ViewModel
-    }
 
     override fun onObtained(location: Location) {
         onLocationObtained(location)
@@ -134,6 +135,11 @@ class LocationVerificationFragment : Fragment(), LocationListenable, PermissionC
             } else {
                 startPreview()
             }
+        }
+
+        binding.checkIn.setOnClickListener {
+            findNavController().popBackStack()
+            dashViewModel.loggedIn = true
         }
 
         guidesOnPrompt()
@@ -406,7 +412,7 @@ class LocationVerificationFragment : Fragment(), LocationListenable, PermissionC
     }
 
     private fun checkGPSFeatureAvailability() {
-        context?.hasGpsSensor(context as FragmentActivity) { available ->
+        activity?.hasGpsSensor(activity as FragmentActivity) { available ->
             if (!available) {
                 Snackbar.make(binding.root, "Device does not have GPS.", Snackbar.LENGTH_LONG).show()
                 return@hasGpsSensor

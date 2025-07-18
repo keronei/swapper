@@ -54,7 +54,8 @@ class SyncRepositoryImpl @Inject constructor(
                             requestedCount = fetchedRequest.batteriesCount,
                             createdTime = fetchedRequest.createdTime,
                             status = fetchedRequest.status,
-                            synced = true
+                            synced = true,
+                            requestedByStation = fetchedRequest.requestedByStation
                         )
                     )
 
@@ -63,7 +64,7 @@ class SyncRepositoryImpl @Inject constructor(
                             BatteryRequestUpdateEntity(
                                 id = 0,
                                 batteryCount = update.batteryCount,
-                                batteries = update.batteries,
+                                batteries = update.batteries.joinToString { "," },
                                 requestId = createdId,
                                 comment = update.comment,
                                 updateAt = update.time
