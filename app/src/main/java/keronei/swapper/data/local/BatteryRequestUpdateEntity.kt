@@ -9,10 +9,10 @@ import androidx.room.PrimaryKey
 )
 class BatteryRequestUpdateEntity(
     @PrimaryKey(autoGenerate = true)
-    val id: Int,
+    val id: Long,
     val batteryCount: Int,
-    val batteries: List<String>,
-    val requestId: Int,
+    val batteries: String,
+    val requestId: Long,
     val comment: String,
     val updateAt: String
 )

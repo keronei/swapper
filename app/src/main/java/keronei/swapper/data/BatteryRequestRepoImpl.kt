@@ -25,6 +25,7 @@ class BatteryRequestRepoImpl @Inject constructor(
                     requestedCount = requestModel.requestCount,
                     createdTime = requestModel.createdTime,
                     status = requestModel.status,
+                    requestedByStation = requestModel.requestedByStation,
                     synced = false
                 )
             )
@@ -56,7 +57,7 @@ class BatteryRequestRepoImpl @Inject constructor(
                 BatteryRequestUpdateEntity(
                     id = 0,
                     batteryCount = updateModel.batteryCount,
-                    batteries = updateModel.batteries,
+                    batteries = updateModel.batteries.joinToString(","),
                     requestId = updateModel.requestId,
                     comment = updateModel.comment,
                     updateAt = updateModel.time
@@ -84,12 +85,14 @@ class BatteryRequestRepoImpl @Inject constructor(
                     comment = req.comment,
                     requestCount = req.requestedCount,
                     createdTime = req.createdTime,
-                    status = req.status
+                    status = req.status,
+                    synced = req.synced,
+                    requestedByStation = req.requestedByStation
                 ), singleItem.updates.map { update ->
                     BatteryRequestUpdateModel(
                         id = update.id,
                         batteryCount = update.batteryCount,
-                        batteries = update.batteries,
+                        batteries = update.batteries.split(","),
                         requestId = update.requestId,
                         comment = update.comment,
                         time = update.updateAt
