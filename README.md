@@ -34,9 +34,10 @@ with check-ins.
 
 ### Screenshots
 
-<img src="/screenshots/Screenshot_20250717-063615_Swapper.jpg" width="220" height="470"/>&nbsp;&nbsp;&nbsp; <img src="/screenshots/Screenshot_20250717-063718_Swapper.jpg" width="220" height="470"/> &nbsp;&nbsp;&nbsp;<img src="/screenshots/Screenshot_20250717-093944_Swapper.jpg_Swapper.jpg" width="220" height="470"/>
+<img src="/screenshots/Screenshot_20250717-063615_Swapper.jpg" width="220" height="470"/>&nbsp;&nbsp;&nbsp; <img src="/screenshots/Screenshot_20250717-063718_Swapper.jpg" width="220" height="470"/> &nbsp;&nbsp;&nbsp;<img src="/screenshots/Screenshot_20250717-093944_Swapper.jpg" width="220" height="470"/>
 
 <img src="/screenshots/Screenshot_20250717-093932_Swapper.jpg" width="220" height="470"/>
+
 ## Technical Details
 At first login, the swapper inputs their country, this will be used to determine the correct API 
 for the country. The following format will work.
