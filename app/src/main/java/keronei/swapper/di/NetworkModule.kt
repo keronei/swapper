@@ -21,7 +21,10 @@ object NetworkModule {
     }
 
     fun provideRetrofit(http: OkHttpClient, gson: Gson): Retrofit {
-        return Retrofit.Builder().baseUrl(baseUrl).addConverterFactory(
+        // Here the country code can be retrieved from preferences and appended to baseUrl
+        val countryCode = "KE"
+
+        return Retrofit.Builder().baseUrl("$baseUrl/$countryCode/").addConverterFactory(
             GsonConverterFactory.create(
                 gson
             )
