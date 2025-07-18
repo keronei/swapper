@@ -11,7 +11,6 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import dagger.hilt.android.AndroidEntryPoint
 import keronei.swapper.dashboard.dispatch.ui.theme.SwapperTheme
 import keronei.swapper.data.domain.BatteryRequestModel
-import java.util.Calendar
 
 @AndroidEntryPoint
 class BatteriesRequestDialogFragment : BottomSheetDialogFragment() {
