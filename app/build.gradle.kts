@@ -111,7 +111,9 @@ android {
         implementation("androidx.fragment:fragment-ktx:1.8.8")
         implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.5.0")
 
-
+        testImplementation("io.mockk:mockk:1.13.5")
+        testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
+        testImplementation("junit:junit:4.13.2")
         androidTestImplementation(TestLibraries.testRunner)
         androidTestImplementation(TestLibraries.espresso)
         androidTestImplementation(TestLibraries.annotation)
