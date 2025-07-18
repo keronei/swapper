@@ -1,11 +1,11 @@
 # Swapper Shift Tracking Prototype
 
-## The Aproach
+## The Approach
 Swappers have accounts that are already registered and will be required to login into a device being used
 at a particular station providing the following: Username/phone, password and country. Once they are logged in, 
-they can now checkin to the station.
+they can now check-in to the station.
 
-Additional hardware is introduced in order to aid in verifying prescence at the station, the hardware
+Additional hardware is introduced in order to aid in verifying presence at the station, the hardware
 is a Bluetooth Low Energy device that advertises packets every 5 seconds or so, the packets contain
 information about the station, which includes station ID, location, etc - this kind of device runs on
 a coin cell and can operate for up to 360 days before the battery runs out. This component will 
@@ -25,15 +25,18 @@ These are two levels for accessing the station device;
 - After a swapper has logged in, they will be required to check-in in order to complete any tasks
 on the app.
 - Check-in requires username and station in order to verify if already logged in.
-- The next step is station prescence verification which requires location, station signal and a selfie.
+- The next step is station presence verification which requires location, station signal and a selfie.
 - Once the details are captured, the location is written onto the image and persisted in the local
 storage, its location is kept on the database alongside the rest of the check-in info.
-- Check-out only requires the station prescence verification and will be stored in the same place
+- Check-out only requires the station presence verification and will be stored in the same place
 with check-ins.
 - This step happens offline, when connectivity is available, the entries are synced to the server.
 
 ### Screenshots
 
+<img src="/screenshots/Screenshot_20250717-063615_Swapper.jpg" width="220" height="470"/>&nbsp;&nbsp;&nbsp; <img src="/screenshots/Screenshot_20250717-063718_Swapper.jpg" width="220" height="470"/> &nbsp;&nbsp;&nbsp;<img src="/screenshots/Screenshot_20250717-093944_Swapper.jpg_Swapper.jpg" width="220" height="470"/>
+
+<img src="/screenshots/Screenshot_20250717-093932_Swapper.jpg" width="220" height="470"/>
 ## Technical Details
 At first login, the swapper inputs their country, this will be used to determine the correct API 
 for the country. The following format will work.
